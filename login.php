@@ -22,8 +22,15 @@ $s->execute();
 
 $user = $s->fetch(PDO::FETCH_ASSOC);
 
-foreach ($use as $user) {
-    echo $use->name;
+
+if($user['email']==$email && $user['password']==$password)
+{
+  echo "login successful";
+
+}
+else
+{
+  echo "Incorrect username and password";
 }
 
 }
